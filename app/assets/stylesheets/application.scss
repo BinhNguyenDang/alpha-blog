@@ -22,26 +22,69 @@
 }
 
 #jumbotron{
-    background-image:  url(image_path('Background14.jpg'));
+    // background-image:  url(image_path('Background14.jpg'));
+    background: linear-gradient(to right, #000000, #272829);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
 }
 
+.card {
+    background: black;
+    border: 1px solid white; /* Add white border */
+}
+
+.card-text,
+.card-title {
+    color: white; /* Set text color to white */
+}
+
+.card-footer {
+    background: linear-gradient(to right, #000000, #272829); /* Add linear gradient background */
+    border-top: 1px solid white; /* Add white border to top */
+}
+
+.card-footer small {
+    color: white; /* Set text color to white */
+}
+
+.my-custom-container {
+    background-color: linear-gradient(to right, #000000, #272829);
+    color: white;
+    max-width: 600px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.my-custom-container .form-group label {
+    color: white;
+}
+
+.my-custom-container .btn-primary {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+.my-custom-container .form-control {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+
 html,
 body {
   height: 100%;
+  background: linear-gradient(to right, #000000, #272829);
 }
 
 #page-content {
   flex: 1 0 auto;
+  
 }
 
 #footer {
     background-color: black;
 }
 
-body {
-  background: linear-gradient(to right, #000000, #272829);
-}

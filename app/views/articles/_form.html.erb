@@ -1,13 +1,5 @@
-<% if @article.errors.any? %>
-    <h2 class="text-danger text-center">Errors occurred: </h2>
-    <ul class="text-center">
-        <% @article.errors.full_messages.each do |msg| %>
-            <li class="text-danger text-center"><%= msg %></li>
-        <% end %>
-    </ul>
-<% end %>
-
 <div class="container my-custom-container">
+    <%= render 'shared/errors'%>
     <div class="form-body">
         <div class="row">
             <div class="form-holder border border-white p-4">

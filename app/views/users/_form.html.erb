@@ -23,13 +23,13 @@
                             <div class="col-md-16">
                                 <div class="form-group">
                                     <%= f.label :password, class: "text-white" %>
-                                    <%= f.password_field :password, class: "form-control larger-description", placeholder: "Enter password", required: true %>
+                                    <%= f.password_field :password, class: "form-control larger-description", placeholder: "Enter password" %>
                                 </div>
                             </div>
                             </br>
                             <div class="col-md-16 ">
                                 <div class="form-group">
-                                    <%= f.submit "Sign up", class: "btn btn-outline-light mr-2" %>
+                                    <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-outline-light mr-2" )%>
                                 </div>
                             </div>
                         <% end %>

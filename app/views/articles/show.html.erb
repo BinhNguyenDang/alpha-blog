@@ -9,7 +9,7 @@
                         <!-- Post title-->
                         <h1 class="fw-bolder mb-1 text-dark"><%= @article.title %></h1>
                         <!-- Post meta content-->
-                        <small>Created <%= time_ago_in_words(@article.created_at) %> ago, edited <%= time_ago_in_words(@article.updated_at) %> ago</small>
+                        <small>Created <%= time_ago_in_words(@article.created_at) %> ago by <%= @article.user.username %>, edited <%= time_ago_in_words(@article.updated_at) %> ago</small>
                         <!-- Post categories-->
                         <br />
                         <%= link_to 'Edit', edit_article_path(@article.id), class:"badge bg-secondary text-decoration-none link-light"  %>

@@ -1,21 +1,27 @@
 <div class="container my-custom-container">
-    <%= render 'shared/errors', obj: @article %>
+    <%= render 'shared/errors', obj: @user %>
     <div class="form-body">
         <div class="row">
             <div class="form-holder border border-white p-4">
                 <div class="form-content">
                     <div class="form-items">
-                        <%= form_with(model: @article, local: true, data: {turbo: false })  do |f| %>
+                        <%= form_with(model: @user, local: true, data: {turbo: false })  do |f| %>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <%= f.label :title, class: "text-white" %>
-                                    <%= f.text_field :title, class: "form-control", placeholder: "Enter title", required: true %>
+                                    <%= f.label :username, class: "text-white" %>
+                                    <%= f.text_field :username, class: "form-control", placeholder: "Enter username", required: true %>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <%= f.label :description, class: "text-white" %>
-                                    <%= f.text_area :description, rows: 10, class: "form-control larger-description", placeholder: "Enter description", required: true %>
+                                    <%= f.label :email, class: "text-white" %>
+                                    <%= f.email_field :email, class: "form-control larger-description", placeholder: "Enter email", required: true %>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <%= f.label :password, class: "text-white" %>
+                                    <%= f.password_field :password, class: "form-control larger-description", placeholder: "Enter password", required: true %>
                                 </div>
                             </div>
                             <div class="col-md-12 text-center">

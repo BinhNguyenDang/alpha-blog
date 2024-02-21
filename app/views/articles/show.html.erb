@@ -16,7 +16,7 @@
                         <%= link_to 'Delete', article_path(@article.id), class:"badge bg-secondary text-decoration-none link-light" , data: { "turbo_method": :delete, "turbo_confirm": "Are you sure?" } %>
                     </header>
                     <!-- Preview image figure-->
-                    <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+                    <figure class="mb-4"><img class="img-fluid rounded" src="https://picsum.photos/id/1<%=@article.id%>/900/400" alt="..." /></figure>
                     <!-- Post content-->
                     <section class="mb-5">
                         <p><strong>Description: </strong><%= simple_format(@article.description) %></p>

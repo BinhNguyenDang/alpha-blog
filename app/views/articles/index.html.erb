@@ -1,31 +1,5 @@
 
 <h1 class="text-center mt-4 text-white">Articles Collection</h1>
-    <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <% @articles.each do |article| %>
-        <div class="col">
-            <div class="card h-100">
-            <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="Image" />
-            <div class="card-body">
-                <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-light" %></h5>
-                <p class="card-text text-light">by <%= article.user.username %> </p>
-                <p class="card-text text-light">
-                <%= truncate(article.description, length: 100) %>
-                </br>
-                <%= link_to "View", article_path(article), class: "btn btn-outline-light" %>
-                <%= link_to "Edit", edit_article_path(article), class: "btn btn-outline-light" %>
-                <%= link_to "Delete", article_path(article), class: "btn btn-outline-light", method: :delete, data: { confirm: "Are you sure?" } %>
-                </p>
-            </div>
-            <div class="card-footer">
-            <small>Created <%= time_ago_in_words(article.created_at) %> ago, 
-            edited <%= time_ago_in_words(article.updated_at) %> ago</small>
-            </div>
-            </div>
-        </div>
-        <% end %>
-    </div>
-    </div>
-
+<%= render 'article' %>
 
 

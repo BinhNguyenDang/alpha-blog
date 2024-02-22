@@ -22,8 +22,9 @@
 }
 
 #jumbotron{
+    // linear-gradient(to right, #000000, #272829)
     // background-image:  url(image_path('Background14.jpg'));
-    background: linear-gradient(to right, #000000, #272829);
+    background: linear-gradient(to right, #000000, #000000);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,8 +35,8 @@
     background-color: white;
 }
 
-.white-card {
-    background-color: white;
+.card white-card {
+    background: white;
 }
 
 .card {
@@ -47,6 +48,7 @@
 .card-title {
     color: white; /* Set text color to white */
 }
+
 
 .card-footer {
     background: linear-gradient(to right, #000000, #272829); /* Add linear gradient background */
@@ -84,7 +86,7 @@
 html,
 body {
   height: 100%;
-  background: linear-gradient(to right, #000000, #272829);
+  background: black;
 }
 
 #page-content {

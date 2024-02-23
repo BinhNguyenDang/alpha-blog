@@ -1,0 +1,42 @@
+<h1 class="text-center mt-4 text-white">Login</h1>
+
+<div class="container my-custom-container">
+    <div class="form-body">
+        <div class="row justify-content-center">
+            <div class="form-holder border border-white p-4" style="width: 400px;">
+                <div class="form-content">
+                    <div class="form-items">
+                        <%= form_with(scope: :session, url: login_path, local: true)  do |f| %>
+                            <div class="col-md-16">
+                                <div class="form-group">
+                                    <%= f.label :email, class: "text-white" %>
+                                    <%= f.email_field :email, class: "form-control larger-description", placeholder: "Enter email", required: true %>
+                                </div>
+                            </div>
+                            </br>
+                            <div class="col-md-16">
+                                <div class="form-group">
+                                    <%= f.label :password, class: "text-white" %>
+                                    <%= f.password_field :password, class: "form-control larger-description", placeholder: "Enter password" %>
+                                </div>
+                            </div>
+                            </br>
+                            <div class="col-md-16 ">
+                                <div class="form-group">
+                                    <%= f.submit "Login", class: "btn btn-outline-light mr-2" %>
+                                </div>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4 mb-4"> <!-- Added margin top -->
+        <%= link_to 'Cancel and return to articles listing', articles_path , class:"btn btn-outline-light"%>
+    </div>
+</div>
+
+
+
+

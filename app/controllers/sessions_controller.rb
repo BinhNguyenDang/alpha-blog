@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
             flash[:notice] = "Welcome back, #{user.username}"
             redirect_to user_path(user)
         else
-            flash.now[:warning] = "Incorrect login detail"
+            flash.now[:alert] = "Incorrect login detail"
             render 'new', status: :unprocessable_entity
         end
     end

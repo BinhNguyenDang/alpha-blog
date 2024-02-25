@@ -18,7 +18,9 @@
                     </a>
                     <ul class="dropdown-menu">
                         <%= link_to "Our Articles", articles_path, class: "dropdown-item"  %>
-                        <%= link_to "Create New Article", new_article_path, class: "dropdown-item" %>
+                        <% if logged_in? %>
+                            <%= link_to "Create New Article", new_article_path, class: "dropdown-item" %>
+                        <% end %>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
@@ -28,15 +30,19 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <% if logged_in? %>
-                            My Account (<%= current_user.username %>) 
+                            <%= "[ADMIN]" if current_user.admin? %> My Account (<%= current_user.username %>) 
                         <% else %>
                             Signing in
                         <% end %>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <% if logged_in? %>
-                            <li><%= link_to current_user.username, user_path(current_user), class: "dropdown-item" %></li>
+                            <li><%= link_to 'Your Profile', user_path(current_user), class: "dropdown-item" %></li>
+                            <li><%= link_to 'Edit Your Profile', edit_user_path(current_user), class: "dropdown-item" %></li>
+                            <li><%= link_to "Create New Article", new_article_path, class: "dropdown-item" %> </li>
                             <li><%= link_to 'Logout', logout_path, class: "dropdown-item", method: :delete %></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><%= link_to 'Delete Profile', user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: { confirm: "Are you sure?" } %></li>
                         <% else %>
                             <li><%= link_to 'Login', login_path, class: "dropdown-item" %></li>
                             <li><%= link_to 'Sign up', signup_path, class: "dropdown-item" %></li>

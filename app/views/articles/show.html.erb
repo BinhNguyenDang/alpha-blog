@@ -7,12 +7,14 @@
                 <header class="mb-4">
                     <!-- Post title-->
                     <h1 class="fw-bolder mb-1 text-dark"><%= @article.title %></h1>
-                    <small>created <%= time_ago_in_words(@article.created_at) %> ago, edited <%= time_ago_in_words(@article.updated_at) %> ago</small>
+                    <small>Created <%= time_ago_in_words(@article.created_at) %> ago, edited <%= time_ago_in_words(@article.updated_at) %> ago</small>
                     <!-- Post meta content-->
                     <!-- Post categories-->
                     <br />
-                    <%= link_to 'Edit', edit_article_path(@article.id), class:"badge bg-secondary text-decoration-none link-light"  %>
-                    <%= link_to 'Delete', article_path(@article.id), class:"badge bg-secondary text-decoration-none link-light" , data: { "turbo_method": :delete, "turbo_confirm": "Are you sure?" } %>
+                    <% if logged_in? &&  (@article.user == current_user || current_user.admin? )  %>
+                        <%= link_to 'Edit', edit_article_path(@article.id), class:"badge bg-secondary text-decoration-none link-light"  %>
+                        <%= link_to 'Delete', article_path(@article.id), class:"badge bg-secondary text-decoration-none link-light" , data: { "turbo_method": :delete, "turbo_confirm": "Are you sure?" } %>
+                    <% end %>
                 </header>
                 <!-- Preview image figure-->
                 <figure class="mb-4"><img class="img-fluid rounded" src="https://picsum.photos/id/1<%=@article.id%>/900/400" alt="..." /></figure>

@@ -13,7 +13,8 @@
         <div class="card-body">
             <h5 class="card-title"><%= link_to user.username, user_path(user), class: "text-light" %></h5>
             <p class="card-text text-light">
-            <%= pluralize(user.articles.count, "article") %>
+                <%= pluralize(user.articles.count, "article") %>
+            </p>
             </br>
             <%= link_to "View Profile", user_path(user), class: "btn btn-outline-light" %>
             <% if logged_in? %> 

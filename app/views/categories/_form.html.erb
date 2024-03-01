@@ -1,0 +1,25 @@
+<%= render 'shared/errors', obj: @category %>
+<div class="form-body">
+    <div class="row justify-content-center">
+        <div class="form-holder border border-white p-4" style="width: 400px;">
+            <div class="form-content">
+                <div class="form-items">
+                    <%= form_with(model: @category, local: true, data: {turbo: false }) do |f| %>
+                        <div class="col-md-16">
+                            <div class="form-group">
+                                <%= f.label :name, "Category name", class: "text-white" %>
+                                <%= f.text_field :name , class: "form-control", placeholder: "Enter name", required: true %>
+                            </div>
+                        </div>
+                        <div class="col-md-16 ">
+                            <div class="form-group">
+                                <%= f.submit class: "btn btn-outline-light mr-2" %>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

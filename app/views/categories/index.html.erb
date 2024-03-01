@@ -9,6 +9,12 @@
             <div class="card h-100">
                 <div class="card-body">
                     <h5 class="card-name"><%= link_to category.name, category_path(category), class: "text-light" %></h5>
+                    <p class="card-text text-light">
+                        <%= pluralize(category.articles.count, "article") %>
+                    </p>
+                    <% if logged_in? && current_user.admin? %>
+                        <%= link_to "Edit Category Name", edit_category_path(category), class: "btn btn-outline-light" %>
+                    <% end %>
                 </div>
                 <div class="card-footer">
                     <small>Created <%= time_ago_in_words(category.created_at) %> ago, 

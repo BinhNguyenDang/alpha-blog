@@ -1,4 +1,4 @@
-<h1 class="text-center mt-4 text-white">Create a New Category</h1>
+<h1 class="text-center mt-4 text-white">Edit Category Name</h1>
 
 <div class="container my-custom-container" style="background-color: black; color: white;">
     <%= render 'form' %>
@@ -6,5 +6,6 @@
 </div>
 
 <div class="text-center mt-4"> <!-- Added margin top -->
-    <%= link_to 'Cancel and return to categories listing', categories_path , class:"btn btn-outline-light"%>
+    <%= link_to 'Cancel and return to category', category_path(@category) , class:"btn btn-outline-light"%>
 </div>
+

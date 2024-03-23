@@ -1,4 +1,4 @@
-
+![image](https://github.com/BinhNguyenDang/alpha-blog/assets/146049423/cd7efd92-0f74-491c-8bde-d607de689979)
 Project Name: Alpha-Blog
 A Ruby Blog
 ------------------------------------------------------
@@ -50,6 +50,8 @@ Demo
 ![image](https://github.com/BinhNguyenDang/alpha-blog/assets/146049423/100209ac-5bb6-4127-8b3c-15a756522e7b)
 
 ![image](https://github.com/BinhNguyenDang/alpha-blog/assets/146049423/3832c14c-52c4-4a23-b7b1-58521dfe4f97)
+
+![image](https://github.com/BinhNguyenDang/alpha-blog/assets/146049423/0e137cb4-e9dc-456f-8ee7-05738d00b120)
 
 ![image](https://github.com/BinhNguyenDang/alpha-blog/assets/146049423/b61c87ed-ab50-4180-b915-d969291a2aa7)
 

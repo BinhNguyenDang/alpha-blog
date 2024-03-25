@@ -14,21 +14,21 @@ Installation
 To get started with this project, follow these steps:
 1.	Make sure you have Ruby version 3.2.3 installed on your system.
 2.	Clone this repository to your local machine.
-
+```
 git clone 
-
+```
 3.	Install gem dependencies by running:
-
+```
 bundle install 
-
+```
 4.	Setup the database:
-
+```
 rails db:migrate
-
+```
 5.	Start the Rails server:
-
+```
 rails s
-
+```
 ----------------------------------------------------
 Usage
 -------------------------------------------------

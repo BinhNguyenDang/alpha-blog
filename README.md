@@ -1,4 +1,4 @@
-![image](https://github.com/BinhNguyenDang/alpha-blog/assets/146049423/cd7efd92-0f74-491c-8bde-d607de689979)
+
 Project Name: Alpha-Blog
 A Ruby Blog
 ------------------------------------------------------
